@@ -9,5 +9,7 @@
 </div>
 
 <div class="content" role="main">
-
+  <div *ngFor="let weather of (weatherData$ | async); let i = index;" class="weather">
+      <input [(ngModel)]="weather.bookmarked" (change)="onBookmark($event, weather)" type="checkbox" name="bookmark" id="" value="false"> <label for="bookmark">{{ weather.name + ', ' + weather.sys.country  }} - {{ weather.main.temp | toCelcius }}<sup>o</sup>C</label> 
+  </div>
 </div>

@@ -290,3 +290,12 @@
       visibility: hidden;
     }
   }
+
+  .weather {
+    margin: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
